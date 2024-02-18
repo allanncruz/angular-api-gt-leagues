@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-auth-fire": {
+    "angular-auth": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-auth-fire",
+            "outputPath": "dist/angular-auth",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-auth-fire:build:production"
+              "browserTarget": "angular-auth:build:production"
             },
             "development": {
-              "browserTarget": "angular-auth-fire:build:development"
+              "browserTarget": "angular-auth:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-auth-fire:build"
+            "browserTarget": "angular-auth:build"
           }
         },
         "test": {

@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-auth-fire'`, () => {
+  it(`should have as title 'angular-auth'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-auth-fire');
+    expect(app.title).toEqual('angular-auth');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-auth-fire app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-auth app is running!');
   });
 });
