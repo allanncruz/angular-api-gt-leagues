@@ -1,0 +1,25 @@
+nav{
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.menu{
+    display: flex;
+
+    &-item{
+        margin: 0 10px;
+    }
+
+    &-link{
+        color: #fff;
+        &:hover{
+            color: #f47c1f;
+        }
+    }
+}
