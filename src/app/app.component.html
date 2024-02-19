@@ -1,8 +1,23 @@
+<div *ngIf="!auth.user">
+  <form>
+    <label for="Email">Email</label>
+    <input type="text" id="Email" name="email" [(ngModel)]="email" />
+    
+    <label for="Password">Password</label>
+    <input type="password" id="Password" name="password" [(ngModel)]="password" />
+    <button (click)="auth.emailSignin(this.email, this.password)">
+      Login
+    </button>
+  </form>
+</div>
 
+<div *ngIf="auth.error">
+  {{ auth.error }}
+</div>
 
-<!-- Toolbar -->
-<div>
-  Home
+<div *ngIf="auth.user">
+  Logged as {{ auth.user.email }}
+  <button (click)="auth.signOut()">Sair</button>
 </div>
 
 <router-outlet></router-outlet>
