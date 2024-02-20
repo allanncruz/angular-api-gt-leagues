@@ -8,8 +8,15 @@ export class AuthService {
 
   user: any;
   error: any;
+  userLogged: any;
+  userLoggedParse: any;
 
-  constructor(public auth: AngularFireAuth) {}
+  constructor(public auth: AngularFireAuth) {
+    this.userLogged = localStorage.getItem('@authUser');
+    this.userLoggedParse = JSON.parse(this.userLogged);
+    console.log(this.userLoggedParse)
+  }
+  
 
   async emailSignin(email: string, password: string) {
     try {
@@ -19,6 +26,8 @@ export class AuthService {
         password
       );
       this.user = credential.user;
+      localStorage.setItem('@authUser', JSON.stringify(this.user))
+      location.reload();
 
     } catch (error) {
       this.error = error;
@@ -28,5 +37,8 @@ export class AuthService {
   async signOut() {
     await this.auth.signOut();
     this.user = null;
+    
+    localStorage.removeItem('@authUser')
+    location.reload();
   }
 }

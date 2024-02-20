@@ -1,7 +1,7 @@
 <app-sign-in></app-sign-in>
 
-<div *ngIf="auth.user">
-  Logged as {{ auth.user.email }}
+<div *ngIf="auth.userLogged">
+  Logged as {{ auth.userLoggedParse.email }}
   <button (click)="auth.signOut()">Sair</button>
 </div>
 

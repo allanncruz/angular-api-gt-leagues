@@ -7,10 +7,6 @@ import { AuthService } from './root/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  email = '' as string;
-  password = '' as string;
-
   constructor(public auth: AuthService) {
-
   }
 }
