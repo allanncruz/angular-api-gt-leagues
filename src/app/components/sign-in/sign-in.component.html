@@ -1,15 +1,19 @@
-<div *ngIf="!auth.userLogged">
-	<form>
-		<label for="Email">Email</label>
-		<input type="text" id="Email" name="email" [(ngModel)]="email" />
-		
-		<label for="Password">Password</label>
-		<input type="password" id="Password" name="password" [(ngModel)]="password" />
-		<button (click)="auth.emailSignin(this.email, this.password)">
-		Login
-		</button>
-	</form>
-	<div *ngIf="auth.error">
-		{{ auth.error }}
+<div *ngIf="!auth.userLogged" class="container-center">
+	<div class="login">
+		<div class="login-area">
+			<img src="../../../assets/logo.png" alt="logo" />
+		</div>
+		<form>
+			<h1>Entrar</h1>
+			<input type="text" placeholder="Email" name="email" [(ngModel)]="email" />
+			
+			<input type="password" placeholder="Senha" name="password" [(ngModel)]="password" />
+			<button (click)="auth.emailSignin(this.email, this.password)">
+				Acessar
+			</button>
+		</form>
+		<div *ngIf="auth.error">
+			{{ auth.error }}
+		</div>
 	</div>
 </div>
