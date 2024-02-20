@@ -5,7 +5,11 @@
     <app-navbar></app-navbar>
 
     <div class="container">
-      container
+      <h2>Data/hora</h2>
+      <p>{{ currentPrice.time.updated }}</p>
+      <hr />
+      <h2>USD (<span [innerHtml]="currentPrice.bpi.USD.symbol"></span>)</h2>
+      <div>{{ currentPrice.bpi.USD.rate_float | currency }}</div>
     </div>
   </div>
 
