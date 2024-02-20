@@ -11,7 +11,7 @@ import { AuthService } from './services/auth.service';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { BitcoinsService } from './services/bitcoins.service';
+import { GTLeagueService } from './services/apis.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { BitcoinsService } from './services/bitcoins.service';
   ],
   providers: [
     AuthService, 
-    BitcoinsService
+    GTLeagueService
   ],
   bootstrap: [AppComponent]
 })

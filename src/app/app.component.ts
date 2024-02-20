@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './services/auth.service';
-import { BitcoinsService } from './services/bitcoins.service';
+import { GTLeagueService } from './services/apis.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor(
     public auth: AuthService,
-    public resultsData: BitcoinsService
+    public resultsData: GTLeagueService
     ) {}
 
   ngOnInit() {

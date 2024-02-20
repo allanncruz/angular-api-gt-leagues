@@ -4,6 +4,28 @@
 
 .table-result{
   margin: 40px auto;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px;
+
+  thead{
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+
+    tr{
+      height: 40px;
+    }
+  }
+
+  tbody{
+    tr:nth-child(even) {
+      background: #f5f5f5
+    }
+    tr:nth-child(odd) {
+        background: #FFF
+    }
+  }
 
   td > div{
     display: flex;
