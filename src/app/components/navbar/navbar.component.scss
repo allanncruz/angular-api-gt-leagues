@@ -1,5 +1,5 @@
 .nav{
-  padding: 10px 20px;
+  padding: 10px 0;
   background-color: black;
   color: #fff;
   
@@ -19,6 +19,11 @@
     justify-content: space-between;
     width: 100%;
     margin-left: 40px;
+    font-size: 12px;
+
+    .btn{
+      margin-left: 5px;
+    }
   }
 }
 
@@ -32,7 +37,7 @@
   &-link{
     color: #fff;
     &:hover{
-      color: #f47c1f;
+      color: #0d9ff8;
     }
   }
 }

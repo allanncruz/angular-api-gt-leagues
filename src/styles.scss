@@ -1,3 +1,8 @@
+// Variables
+$color-primary: #0d9ff8;
+$color-secondary: #6c757d;
+$color-white: #fff;
+
 *{
     padding: 0;
     margin: 0;
@@ -11,7 +16,7 @@
   body{
     font-size: 14px;
     font-family: sans-serif;
-    background-color: #efefef;
+    background-color: $color-white;
   }
 
   a{
@@ -33,4 +38,40 @@
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  // Buttons 
+
+  .btn{
+    text-align: center;
+    transition: 0.3s;
+    background: transparent;
+    border: 0;
+    color: $color-white;
+    border-radius: 3px;
+
+    &:hover{
+      filter: brightness(0.8);
+    }
+
+    &-large{
+      padding: 10px 30px;
+    }
+
+    &-medium{
+      padding: 7px 15px;
+    }
+
+    &-small{
+      padding: 3px 12px;
+      font-size: 12px;
+    }
+
+    &-primary{
+      background-color: $color-primary;
+    }
+
+    &-secondary{
+      background-color: $color-secondary;
+    }
   }
