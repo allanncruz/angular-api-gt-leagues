@@ -14,7 +14,6 @@ export class AuthService {
   constructor(public auth: AngularFireAuth) {
     this.userLogged = localStorage.getItem('@authUser');
     this.userLoggedParse = JSON.parse(this.userLogged);
-    console.log(this.userLoggedParse)
   }
   
 

@@ -10,6 +10,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AuthService } from './root/auth.service';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
       appId: "1:644096836227:web:47bad91a59fe97ec0251b6"
     }),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    HttpClientModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
