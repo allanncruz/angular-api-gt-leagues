@@ -14,6 +14,19 @@
         <hr />
         <h2>BRL (<span [innerHtml]="bitcois.currentPrice.bpi.BRL.symbol"></span>)</h2>
         <div>R{{ bitcois.currentPrice.bpi.BRL.rate_float | currency }}</div>
+
+        <table border="1">
+          <tr>
+            <th>Updated</th>
+            <th>USD</th>
+            <th>BRL</th>
+          </tr>
+          <tr *ngFor="let price of this.bitcois.history">
+            <td>{{ price.time.updated }}</td>
+            <td>{{ price.bpi.USD.rate_float | currency }}</td>
+            <td>{{ price.bpi.BRL.rate_float | currency }}</td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>
