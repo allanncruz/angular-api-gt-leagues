@@ -7,10 +7,11 @@ import { FormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { AuthService } from './root/auth.service';
+import { AuthService } from './services/auth.service';
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+import { BitcoinsService } from './services/bitcoins.service';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,10 @@ import { HttpClientModule } from '@angular/common/http';
     AngularFireAuthModule,
     HttpClientModule
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService, 
+    BitcoinsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
