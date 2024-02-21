@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
-  selector: 'app-sign-in',
-  templateUrl: './sign-in.component.html',
-  styleUrls: ['./sign-in.component.scss']
+  selector: 'cp-signin',
+  templateUrl: './cp-signin.component.html',
+  styleUrls: ['./cp-signin.component.scss']
 })
 export class SignInComponent {
   
