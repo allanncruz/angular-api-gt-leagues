@@ -8,20 +8,32 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AuthService } from './services/auth.service';
-import { SignInComponent } from './components/sign-in/sign-in.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { SignInComponent } from './components/cp-signin/cp-signin.component';
+import { NavbarComponent } from './components/cp-navbar/cp-navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GTLeagueService } from './services/apis.service';
+import { PgGtleagueComponent } from './pages/pg-gtleague/pg-gtleague.component';
+import { PgHomeComponent } from './pages/pg-home/pg-home.component';
+import { PgAdriactleagueComponent } from './pages/pg-adriactleague/pg-adriactleague.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignInComponent,
-    NavbarComponent
+    NavbarComponent,
+    PgGtleagueComponent,
+    PgHomeComponent,
+    PgAdriactleagueComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot([
+      {path: '/', component: PgHomeComponent },
+      {path: '/gtleague', component: PgGtleagueComponent },
+      {path: '/adriactleague', component: PgAdriactleagueComponent }
+    ]),
     FormsModule,
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyASnn7KUCLuPvrS_Jboyk0If-mRZABCMDM",
