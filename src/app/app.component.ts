@@ -9,10 +9,7 @@ import { GTLeagueService } from './services/apis.service';
 })
 export class AppComponent {
 
-  constructor(
-    public auth: AuthService,
-    public resultsData: GTLeagueService
-    ) {}
+  constructor(public auth: AuthService) {}
 
   ngOnInit() {
   }

@@ -30,9 +30,9 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      {path: '/', component: PgHomeComponent },
-      {path: '/gtleague', component: PgGtleagueComponent },
-      {path: '/adriactleague', component: PgAdriactleagueComponent }
+      {path: '', component: PgHomeComponent },
+      {path: 'gtleague', component: PgGtleagueComponent },
+      {path: 'adriactleague', component: PgAdriactleagueComponent }
     ]),
     FormsModule,
     AngularFireModule.initializeApp({
