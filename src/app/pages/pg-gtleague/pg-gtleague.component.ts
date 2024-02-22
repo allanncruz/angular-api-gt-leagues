@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GTLeagueService } from 'src/app/services/apis.service';
+import { GTLeagueService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'pg-gtleague',

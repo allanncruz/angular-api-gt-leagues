@@ -11,7 +11,7 @@ import { AuthService } from './services/auth.service';
 import { SignInComponent } from './components/cp-signin/cp-signin.component';
 import { NavbarComponent } from './components/cp-navbar/cp-navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { GTLeagueService } from './services/apis.service';
+import { GTLeagueService } from './services/api.service';
 import { PgGtleagueComponent } from './pages/pg-gtleague/pg-gtleague.component';
 import { PgHomeComponent } from './pages/pg-home/pg-home.component';
 import { PgAdriactleagueComponent } from './pages/pg-adriactleague/pg-adriactleague.component';

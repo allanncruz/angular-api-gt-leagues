@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './services/auth.service';
-import { GTLeagueService } from './services/apis.service';
+import { GTLeagueService } from './services/api.service';
 
 @Component({
   selector: 'app-root',

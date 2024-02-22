@@ -1,29 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-interface GtLeagueResponse extends Array<GtLeagueResponse> {
-  updatedAt: string,
-  result: {
-    stats: {
-      away_score: number,
-      home_score: number
-    }
-  },
-  participants: GtLeagueParticipants  
-}
-
-interface GtLeagueParticipants extends Array<GtLeagueParticipants> {
-  participant: {
-    team :{
-      crest: string,
-      name: string
-    },
-    player :{
-      nickname: string
-    }
-  }
-};
-
+import { GtLeagueResponse } from '../interface/gtleague';
 
 @Injectable({
   providedIn: 'root'
