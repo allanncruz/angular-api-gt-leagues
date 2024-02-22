@@ -16,7 +16,6 @@ import { PgGtleagueComponent } from './pages/pg-gtleague/pg-gtleague.component';
 import { PgHomeComponent } from './pages/pg-home/pg-home.component';
 import { PgAdriactleagueComponent } from './pages/pg-adriactleague/pg-adriactleague.component';
 import { RouterModule } from '@angular/router';
-import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -36,7 +35,15 @@ import { environment } from 'src/environments/environment';
       {path: 'adriactleague', component: PgAdriactleagueComponent }
     ]),
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireModule.initializeApp({
+      apiKey: "AIzaSyASnn7KUCLuPvrS_Jboyk0If-mRZABCMDM",
+      authDomain: "angular-auth-df76e.firebaseapp.com",
+      databaseURL: "https://angular-auth-df76e-default-rtdb.firebaseio.com",
+      projectId: "angular-auth-df76e",
+      storageBucket: "angular-auth-df76e.appspot.com",
+      messagingSenderId: "644096836227",
+      appId: "1:644096836227:web:47bad91a59fe97ec0251b6"
+    }),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
     HttpClientModule
