@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PgGtleagueComponent } from './pg-gtleague.component';
+import { PgGtleagueComponent } from './pg-results.component';
 
 describe('PgGtleagueComponent', () => {
   let component: PgGtleagueComponent;

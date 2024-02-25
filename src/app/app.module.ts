@@ -12,7 +12,7 @@ import { SignInComponent } from './components/cp-signin/cp-signin.component';
 import { NavbarComponent } from './components/cp-navbar/cp-navbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GTLeagueService } from './services/api.service';
-import { PgGtleagueComponent } from './pages/pg-gtleague/pg-gtleague.component';
+import { PgResultsComponent } from './pages/pg-results/pg-results.component';
 import { PgHomeComponent } from './pages/pg-home/pg-home.component';
 import { PgAdriactleagueComponent } from './pages/pg-adriactleague/pg-adriactleague.component';
 import { RouterModule } from '@angular/router';
@@ -22,7 +22,7 @@ import { RouterModule } from '@angular/router';
     AppComponent,
     SignInComponent,
     NavbarComponent,
-    PgGtleagueComponent,
+    PgResultsComponent,
     PgHomeComponent,
     PgAdriactleagueComponent
   ],
@@ -31,7 +31,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     RouterModule.forRoot([
       {path: '', component: PgHomeComponent },
-      {path: 'gtleague', component: PgGtleagueComponent },
+      {path: 'results', component: PgResultsComponent },
       {path: 'adriactleague', component: PgAdriactleagueComponent }
     ]),
     FormsModule,

@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { GTLeagueService } from 'src/app/services/api.service';
 
 @Component({
-  selector: 'pg-gtleague',
-  templateUrl: './pg-gtleague.component.html',
-  styleUrls: ['./pg-gtleague.component.scss']
+  selector: 'pg-results',
+  templateUrl: './pg-results.component.html',
+  styleUrls: ['./pg-results.component.scss']
 })
-export class PgGtleagueComponent {
+export class PgResultsComponent {
 
   constructor(public resultsData: GTLeagueService) {}
 
