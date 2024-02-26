@@ -6,8 +6,19 @@ export interface GtLeagueResponse extends Array<GtLeagueResponse> {
       home_score: number
       }
   },
-  participants: GtLeagueParticipants  
+  participants: GtLeagueParticipants,
+  season: GtLeagueSeason
 }
+  
+interface GtLeagueSeason extends Array<GtLeagueSeason> {
+  tournament: {
+    category: {
+      sport: {
+        name: string
+      }
+    }
+  }
+};
   
 interface GtLeagueParticipants extends Array<GtLeagueParticipants> {
   participant: {

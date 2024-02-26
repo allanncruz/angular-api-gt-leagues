@@ -3,6 +3,7 @@
       <table class="table-result">
         <thead>
           <tr>
+            <th>Sport</th>
             <th>Home</th>
             <th></th>
             <th></th>
@@ -12,6 +13,9 @@
         </thead>
         <tbody>
           <tr *ngFor="let results of this.resultsData.listResults">
+            <td>
+              <small>{{ results.season.tournament.category.sport.name }}</small>
+            </td>
             <td>
               <div class="table-result__home">
                 {{ results.participants[0].participant.team.name }}

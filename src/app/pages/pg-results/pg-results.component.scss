@@ -25,6 +25,10 @@
       tr:nth-child(odd) {
           background: #FFF
       }
+      tr{
+        height: 50px;
+        text-align: center;
+      }
     }
   
     td > div{
