@@ -1,18 +1,23 @@
 <nav class="nav">
   <div class="container">
     <div class="nav-brand">
-			<img src="../../../assets/logo.png" alt="logo" />
+			<a class="menu-link" [routerLink]="'/'">
+        <img src="../../../assets/logo.png" alt="logo" />
+      </a>
     </div>
     <div class="nav-items">
       <ul class="menu">
         <li class="menu-item">
-            <a class="menu-link" [routerLink]="'/'">Início</a>
+          <a class="menu-link" [routerLink]="''" [routerLinkActive]="'active'">Início</a>
         </li>
         <li class="menu-item">
-            <a class="menu-link" [routerLink]="'/results'">Results</a>
+          <a class="menu-link" [routerLink]="'/results'" [routerLinkActive]="'active'">Results</a>
         </li>
         <li class="menu-item">
-            <a class="menu-link" [routerLink]="'/adriactleague'">Adriatic Soccer</a>
+          <a class="menu-link" [routerLink]="'/adriactleague'" [routerLinkActive]="'active'">Adriatic Soccer</a>
+        </li>
+        <li class="menu-item">
+          <a class="menu-link" [routerLink]="'/imagem-compress'" [routerLinkActive]="'active'">Imagem Compress</a>
         </li>
       </ul>
       <div>

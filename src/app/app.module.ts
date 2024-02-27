@@ -16,6 +16,8 @@ import { PgResultsComponent } from './pages/pg-results/pg-results.component';
 import { PgHomeComponent } from './pages/pg-home/pg-home.component';
 import { PgAdriactleagueComponent } from './pages/pg-adriactleague/pg-adriactleague.component';
 import { RouterModule } from '@angular/router';
+import { NgxImageCompressService } from 'ngx-image-compress';
+import { PgPhotoComponent } from './pages/pg-photo/pg-photo.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,8 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     PgResultsComponent,
     PgHomeComponent,
-    PgAdriactleagueComponent
+    PgAdriactleagueComponent,
+    PgPhotoComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,8 @@ import { RouterModule } from '@angular/router';
     RouterModule.forRoot([
       {path: '', component: PgHomeComponent },
       {path: 'results', component: PgResultsComponent },
-      {path: 'adriactleague', component: PgAdriactleagueComponent }
+      {path: 'adriactleague', component: PgAdriactleagueComponent },
+      {path: 'imagem-compress', component: PgPhotoComponent }
     ]),
     FormsModule,
     AngularFireModule.initializeApp({
@@ -50,7 +54,8 @@ import { RouterModule } from '@angular/router';
   ],
   providers: [
     AuthService, 
-    GTLeagueService
+    GTLeagueService,
+    NgxImageCompressService
   ],
   bootstrap: [AppComponent]
 })
