@@ -14,7 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ResultsService } from './services/result.service';
 import { PgResultsComponent } from './pages/pg-results/pg-results.component';
 import { PgHomeComponent } from './pages/pg-home/pg-home.component';
-import { PgAdriactleagueComponent } from './pages/pg-adriactleague/pg-adriactleague.component';
+import { PgSeasonsComponent } from './pages/pg-seasons/pg-seasons.component';
 import { RouterModule } from '@angular/router';
 import { NgxImageCompressService } from 'ngx-image-compress';
 import { PgPhotoComponent } from './pages/pg-photo/pg-photo.component';
@@ -26,7 +26,7 @@ import { PgPhotoComponent } from './pages/pg-photo/pg-photo.component';
     NavbarComponent,
     PgResultsComponent,
     PgHomeComponent,
-    PgAdriactleagueComponent,
+    PgSeasonsComponent,
     PgPhotoComponent
   ],
   imports: [
@@ -35,7 +35,7 @@ import { PgPhotoComponent } from './pages/pg-photo/pg-photo.component';
     RouterModule.forRoot([
       {path: 'home', component: PgHomeComponent },
       {path: 'results', component: PgResultsComponent },
-      {path: 'adriactleague', component: PgAdriactleagueComponent },
+      {path: 'current-seasons', component: PgSeasonsComponent },
       {path: 'imagem-compress', component: PgPhotoComponent }
     ]),
     FormsModule,
