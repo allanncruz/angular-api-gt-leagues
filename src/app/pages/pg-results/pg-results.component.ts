@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GTLeagueService } from 'src/app/services/api.service';
+import { ResultsService } from 'src/app/services/result.service';
 
 @Component({
   selector: 'pg-results',
@@ -8,6 +8,6 @@ import { GTLeagueService } from 'src/app/services/api.service';
 })
 export class PgResultsComponent {
 
-  constructor(public resultsData: GTLeagueService) {}
+  constructor(public resultsData: ResultsService) {}
 
 }

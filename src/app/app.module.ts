@@ -11,7 +11,7 @@ import { AuthService } from './services/auth.service';
 import { SignInComponent } from './components/cp-signin/cp-signin.component';
 import { NavbarComponent } from './components/cp-navbar/cp-navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { GTLeagueService } from './services/api.service';
+import { ResultsService } from './services/result.service';
 import { PgResultsComponent } from './pages/pg-results/pg-results.component';
 import { PgHomeComponent } from './pages/pg-home/pg-home.component';
 import { PgAdriactleagueComponent } from './pages/pg-adriactleague/pg-adriactleague.component';
@@ -33,7 +33,7 @@ import { PgPhotoComponent } from './pages/pg-photo/pg-photo.component';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
-      {path: '', component: PgHomeComponent },
+      {path: 'home', component: PgHomeComponent },
       {path: 'results', component: PgResultsComponent },
       {path: 'adriactleague', component: PgAdriactleagueComponent },
       {path: 'imagem-compress', component: PgPhotoComponent }
@@ -54,7 +54,7 @@ import { PgPhotoComponent } from './pages/pg-photo/pg-photo.component';
   ],
   providers: [
     AuthService, 
-    GTLeagueService,
+    ResultsService,
     NgxImageCompressService
   ],
   bootstrap: [AppComponent]

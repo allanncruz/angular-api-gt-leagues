@@ -1,4 +1,4 @@
-export interface GtLeagueResponse extends Array<GtLeagueResponse> {
+export interface ResultsResponse extends Array<ResultsResponse> {
   updatedAt: string,
   result: {
       stats: {
@@ -6,11 +6,11 @@ export interface GtLeagueResponse extends Array<GtLeagueResponse> {
       home_score: number
       }
   },
-  participants: GtLeagueParticipants,
-  season: GtLeagueSeason
+  participants: Participants,
+  season: Pournament
 }
   
-interface GtLeagueSeason extends Array<GtLeagueSeason> {
+interface Pournament extends Array<Pournament> {
   tournament: {
     category: {
       sport: {
@@ -20,7 +20,7 @@ interface GtLeagueSeason extends Array<GtLeagueSeason> {
   }
 };
   
-interface GtLeagueParticipants extends Array<GtLeagueParticipants> {
+interface Participants extends Array<Participants> {
   participant: {
     team :{
       crest: string,
