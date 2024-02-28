@@ -1,38 +1,41 @@
 <div class="container">
-    <div >
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Sport</th>
-            <th>Home</th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th>Away</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let results of this.resultsData.listResults">
-            <td>
-              <small>{{ results.season.tournament.category.sport.name }}</small>
-            </td>
-            <td>
-              <div class="table-home">
-                {{ results.participants[0].participant.team.name }}
-                <img src="{{ results.participants[0].participant.team.crest }}" alt="">
-              </div>
-            </td>
-            <td>{{ results.result.stats.home_score}}</td>
-            <td>X</td>
-            <td>{{ results.result.stats.away_score}}</td>
-            <td>
-              <div  class="table-away">
-                <img src="{{ results.participants[1].participant.team.crest }}" alt="">
-                {{ results.participants[1].participant.team.name }}
-              </div>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+  <div *ngIf="loading">
+    Carregando...
   </div>
+  <div *ngIf="!loading">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Sport</th>
+          <th>Home</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>Away</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let results of data">
+          <td>
+            <small>{{ results.season.tournament.category.sport.name }}</small>
+          </td>
+          <td>
+            <div class="table-home">
+              {{ results.participants[0].participant.team.name }}
+              <img src="{{ results.participants[0].participant.team.crest }}" alt="">
+            </div>
+          </td>
+          <td>{{ results.result.stats.home_score}}</td>
+          <td>X</td>
+          <td>{{ results.result.stats.away_score}}</td>
+          <td>
+            <div  class="table-away">
+              <img src="{{ results.participants[1].participant.team.crest }}" alt="">
+              {{ results.participants[1].participant.team.name }}
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

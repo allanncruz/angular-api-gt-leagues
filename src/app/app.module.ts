@@ -11,13 +11,13 @@ import { AuthService } from './services/auth.service';
 import { SignInComponent } from './components/cp-signin/cp-signin.component';
 import { NavbarComponent } from './components/cp-navbar/cp-navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ResultsService } from './services/result.service';
 import { PgResultsComponent } from './pages/pg-results/pg-results.component';
 import { PgHomeComponent } from './pages/pg-home/pg-home.component';
 import { PgSeasonsComponent } from './pages/pg-seasons/pg-seasons.component';
 import { RouterModule } from '@angular/router';
 import { NgxImageCompressService } from 'ngx-image-compress';
 import { PgPhotoComponent } from './pages/pg-photo/pg-photo.component';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +54,7 @@ import { PgPhotoComponent } from './pages/pg-photo/pg-photo.component';
   ],
   providers: [
     AuthService, 
-    ResultsService,
+    ApiService,
     NgxImageCompressService
   ],
   bootstrap: [AppComponent]

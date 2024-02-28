@@ -1,13 +1,29 @@
-import { Component } from '@angular/core';
-import { ResultsService } from 'src/app/services/result.service';
+import { Component, OnInit } from '@angular/core';
+import { ResultsResponse } from 'src/app/interface/results';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'pg-results',
   templateUrl: './pg-results.component.html',
   styleUrls: ['./pg-results.component.scss']
 })
-export class PgResultsComponent {
+export class PgResultsComponent implements OnInit {
+  data = {} as ResultsResponse;
+  loading: boolean = true;
 
-  constructor(public resultsData: ResultsService) {}
+  constructor(public resultsData: ApiService) {}
+  
+  ngOnInit(): void {
+    this.resultsData.fetchResultsData().subscribe(
+      (response) => {
+        this.data = response;
+        this.loading = false;
+      },
+      (error) => {
+        console.error('Erro ao carregar dados:', error);
+        this.loading = false;
+      }
+    );
+  }
 
 }

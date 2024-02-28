@@ -1,5 +1,9 @@
 <div class="container">
-  <div >
+  <div *ngIf="loading">
+    Carregando...
+  </div>
+
+  <div *ngIf="!loading">
     <table class="table">
       <thead>
         <tr>
@@ -10,7 +14,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let season of this.seasonsData.listSeasons">
+        <tr *ngFor="let season of data">
           <td>
             <small>{{ season.tournament.category.sport.name }}</small>
           </td>
