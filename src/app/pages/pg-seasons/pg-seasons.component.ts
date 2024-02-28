@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SeasonsService } from 'src/app/services/seasons.service';
 
 @Component({
   selector: 'pg-seasons',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./pg-seasons.component.scss']
 })
 export class PgSeasonsComponent {
+
+  constructor(public seasonsData: SeasonsService) {}
 
 }

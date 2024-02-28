@@ -1,1 +1,30 @@
-<p>pg-adriactleague works!</p>
+<div class="container">
+  <div >
+    <table class="table-result">
+      <thead>
+        <tr>
+          <th>Sport</th>
+          <th>Category</th>
+          <th>Tournament</th>
+          <th>Nome</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let season of this.seasonsData.listSeasons">
+          <td>
+            <small>{{ season.tournament.category.sport.name }}</small>
+          </td>
+          <td>
+            <small>{{ season.tournament.category.name }}</small>
+          </td>
+          <td>
+            <small>{{ season.tournament.name }}</small>
+          </td>
+          <td>
+            <small>{{ season.name }}</small>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
