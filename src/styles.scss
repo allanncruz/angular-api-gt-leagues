@@ -75,3 +75,45 @@ $color-white: #fff;
       background-color: $color-secondary;
     }
   }
+
+
+//Table
+
+.container-center{
+  height: 100vh;
+}
+
+.table{
+  margin: 40px auto;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 700px;
+
+  thead{
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+
+    tr{
+      height: 40px;
+    }
+  }
+
+  tbody{
+    tr:nth-child(even) {
+      background: #f5f5f5
+    }
+    tr:nth-child(odd) {
+        background: #FFF
+    }
+    tr{
+      height: 50px;
+      text-align: center;
+    }
+  }
+
+  td > div{
+    display: flex;
+    align-items: center;
+  }
+}
