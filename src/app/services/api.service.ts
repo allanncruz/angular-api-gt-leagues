@@ -6,12 +6,14 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApiService {
-  today: any = new Date();
+  today: Date = new Date();
+  apiGtLeague: string = "https://api.gtleagues.com/api/";
+  limit: number = 1000;
 
   constructor(private http: HttpClient) {}
 
   fetchSeasonsData(): Observable<any> {
-    return this.http.get('https://api.gtleagues.com/api/seasons?limit=1000&offset=0&status=1');
+    return this.http.get(`${this.apiGtLeague}seasons?limit=${this.limit}&offset=0&status=1`);
   }
 
   fetchResultsData(): Observable<any> {
@@ -31,6 +33,6 @@ export class ApiService {
     const kickoffFrom = year.toString().concat('-').concat(monthValue).concat('-').concat(dayValue);
     const kickoffTo   = year.toString().concat('-').concat(monthValue).concat('-').concat(dayValueTo);
     
-    return this.http.get(`https://api.gtleagues.com/api/fixtures?kickoff=between%3A${kickoffFrom}T03%3A00%3A00.000Z%2C${kickoffTo}T02%3A59%3A59.999Z&limit=50&offset=0&sort=-kickoff%2C-matchNr&status=in%3A3%2C5%2C4%2C6&xtc=true`);
+    return this.http.get(`${this.apiGtLeague}fixtures?kickoff=between%3A${kickoffFrom}T03%3A00%3A00.000Z%2C${kickoffTo}T02%3A59%3A59.999Z&limit=50&offset=0&sort=-kickoff%2C-matchNr&status=in%3A3%2C5%2C4%2C6&xtc=true`);
   }
 }
