@@ -40,6 +40,16 @@ export class ApiService {
   }
 
   fetchResultsData(): Observable<any> {
-    return this.http.get(`${this.apiGtLeague}fixtures?kickoff=between%3A${this.currentDate}T03%3A00%3A00.000Z%2C${this.tomorrowDate}T02%3A59%3A59.999Z&limit=50&offset=0&sort=-kickoff%2C-matchNr&status=in%3A3%2C5%2C4%2C6&xtc=true`);
+    const params = {
+      kickoff: `between:${this.currentDate}T03:00:00.000Z,${this.tomorrowDate}T02:59:59.999Z`,
+      limit: 50,
+      offset: 0,
+      sort: '-kickoff,-matchNr',
+      status: 'in:3,5,4,6',
+      xtc: true
+    };
+
+    console.log(params)
+    return this.http.get(`${this.apiGtLeague}fixtures`, { params });
   }
 }
