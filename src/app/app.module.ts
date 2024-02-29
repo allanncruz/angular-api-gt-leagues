@@ -18,6 +18,7 @@ import { RouterModule } from '@angular/router';
 import { NgxImageCompressService } from 'ngx-image-compress';
 import { PgPhotoComponent } from './pages/pg-photo/pg-photo.component';
 import { ApiService } from './services/api.service';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ApiService } from './services/api.service';
     PgResultsComponent,
     PgHomeComponent,
     PgSeasonsComponent,
-    PgPhotoComponent
+    PgPhotoComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
