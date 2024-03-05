@@ -1,17 +1,23 @@
 .table{
   &-home{
-    justify-content: flex-end;
+    width: 180px;
+    div{
+      justify-content: flex-end;
+    }
   }
 
   &-away{
-    justify-content: flex-start;
+    width: 180px;
+    div{
+      justify-content: flex-start;
+    }
   }
 
   img{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     object-fit: contain;
     float: right;
-    margin: 5px;
+    margin-bottom: 5px;
   }
 }

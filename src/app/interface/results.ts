@@ -1,5 +1,6 @@
 export interface ResultsResponse extends Array<ResultsResponse> {
   updatedAt: string,
+  kickoff: string,
   result: {
       stats: {
       away_score: number,
@@ -27,7 +28,8 @@ interface Participants extends Array<Participants> {
       name: string
     },
     player :{
-      nickname: string
+      nickname: string,
+      name: string
     }
   }
 };

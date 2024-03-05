@@ -35,6 +35,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
+      {path: '', component: PgHomeComponent },
       {path: 'home', component: PgHomeComponent },
       {path: 'results', component: PgResultsComponent },
       {path: 'current-seasons', component: PgSeasonsComponent },
