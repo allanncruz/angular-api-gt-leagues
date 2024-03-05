@@ -7,20 +7,27 @@
     <table class="table">
       <thead>
         <tr>
+          <th>#</th>
           <th>Sport</th>
+          <th>Week</th>
           <th>kickoff</th>
           <th>Home</th>
           <th></th>
           <th></th>
           <th></th>
           <th>Away</th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let results of data">
           <td>
+            {{ results.matchNr }}
+          </td>
+          <td>
             <small>{{ results.season.tournament.category.sport.name }}</small>
           </td>
+          <td>{{ results.week}}</td>
           <td>
             <small>{{ results.kickoff  | date:'M/d/yy, h:mm a' }}</small>
           </td>
@@ -40,6 +47,9 @@
               {{ results.participants[1].participant.team.name }}
               <small>{{ results.participants[1].participant.player.name }}</small>
             </div>
+          </td>
+          <td>
+            <i class="icon-chart"></i>
           </td>
         </tr>
       </tbody>
