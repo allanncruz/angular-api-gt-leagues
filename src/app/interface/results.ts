@@ -10,7 +10,8 @@ export interface ResultsResponse extends Array<ResultsResponse> {
   participants: Participants,
   season: Pournament,
   week: number,
-  matchNr: number
+  matchNr: number,
+  id: number
 }
   
 interface Pournament extends Array<Pournament> {

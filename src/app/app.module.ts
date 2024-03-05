@@ -19,6 +19,7 @@ import { NgxImageCompressService } from 'ngx-image-compress';
 import { PgPhotoComponent } from './pages/pg-photo/pg-photo.component';
 import { ApiService } from './services/api.service';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SpResultsComponent } from './pages/sp-results/sp-results.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     PgHomeComponent,
     PgSeasonsComponent,
     PgPhotoComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    SpResultsComponent
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
       {path: '', component: PgHomeComponent },
       {path: 'home', component: PgHomeComponent },
       {path: 'results', component: PgResultsComponent },
+      {path: 'results/:id', component: SpResultsComponent },
       {path: 'current-seasons', component: PgSeasonsComponent },
       {path: 'imagem-compress', component: PgPhotoComponent }
     ]),
