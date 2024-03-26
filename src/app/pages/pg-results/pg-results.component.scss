@@ -1,0 +1,31 @@
+.table{
+  &-home{
+    width: 180px;
+    div{
+      justify-content: flex-end;
+    }
+  }
+
+  &-away{
+    width: 180px;
+    div{
+      justify-content: flex-start;
+    }
+  }
+
+  &-draw{
+    background-color: #fdd7d7 !important;
+  }
+
+  img{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    float: right;
+    margin-bottom: 5px;
+  }
+}
+
+.icon-chart{
+  margin: 0 auto;
+}

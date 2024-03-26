@@ -11,28 +11,34 @@ import { AuthService } from './services/auth.service';
 import { SignInComponent } from './components/cp-signin/cp-signin.component';
 import { NavbarComponent } from './components/cp-navbar/cp-navbar.component';
 import { HttpClientModule } from '@angular/common/http';
-import { GTLeagueService } from './services/apis.service';
-import { PgGtleagueComponent } from './pages/pg-gtleague/pg-gtleague.component';
+import { PgResultsComponent } from './pages/pg-results/pg-results.component';
 import { PgHomeComponent } from './pages/pg-home/pg-home.component';
-import { PgAdriactleagueComponent } from './pages/pg-adriactleague/pg-adriactleague.component';
+import { PgSeasonsComponent } from './pages/pg-seasons/pg-seasons.component';
 import { RouterModule } from '@angular/router';
+import { ApiService } from './services/api.service';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SpResultsComponent } from './pages/sp-results/sp-results.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignInComponent,
     NavbarComponent,
-    PgGtleagueComponent,
+    PgResultsComponent,
     PgHomeComponent,
-    PgAdriactleagueComponent
+    PgSeasonsComponent,
+    SpinnerComponent,
+    SpResultsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {path: '', component: PgHomeComponent },
-      {path: 'gtleague', component: PgGtleagueComponent },
-      {path: 'adriactleague', component: PgAdriactleagueComponent }
+      {path: 'home', component: PgHomeComponent },
+      {path: 'results', component: PgResultsComponent },
+      {path: 'results/:id', component: SpResultsComponent },
+      {path: 'current-seasons', component: PgSeasonsComponent },
     ]),
     FormsModule,
     AngularFireModule.initializeApp({
@@ -50,7 +56,7 @@ import { RouterModule } from '@angular/router';
   ],
   providers: [
     AuthService, 
-    GTLeagueService
+    ApiService
   ],
   bootstrap: [AppComponent]
 })

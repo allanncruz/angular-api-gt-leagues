@@ -1,0 +1,62 @@
+<div class="container">
+  <div *ngIf="loading">
+    <app-spinner></app-spinner>
+  </div>
+
+  <div *ngIf="!loading">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Sport</th>
+          <th>Week</th>
+          <th>kickoff</th>
+          <th>Home</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th>Away</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let results of data" [ngClass]="{'table-draw': results.result.stats.home_score === results.result.stats.away_score}">
+          <td>
+            {{ results.matchNr }}
+          </td>
+          <td>
+            <small>{{ results.season.tournament.category.sport.name }}</small>
+          </td>
+          <td>{{ results.week}}</td>
+          <td>
+            <small>{{ results.kickoff  | date:'M/d/yy, h:mm a' }}</small>
+          </td>
+          <td class="table-home">
+            <div>
+              <img src="{{ results.participants[0].participant.team.crest }}" alt="">
+              {{ results.participants[0].participant.team.name }}
+              <span>{{ results.participants[0].participant.player.name }}</span>
+              <small>{{ results.participants[0].participant.player.nickname }}</small>
+            </div>
+          </td>
+          <td>{{ results.result.stats.home_score}}</td>
+          <td>X</td>
+          <td>{{ results.result.stats.away_score}}</td>
+          <td class="table-away"> 
+            <div>
+              <img src="{{ results.participants[1].participant.team.crest }}" alt="">
+              {{ results.participants[1].participant.team.name }}
+              <span>{{ results.participants[1].participant.player.name }}</span>
+              <small>{{ results.participants[1].participant.player.nickname }}</small>
+            </div>
+          </td>
+          <td>
+            <a class="menu-link" routerLink="{{results.id}}">
+              <i class="icon-chart"></i>
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+  <div *ngIf="loading">
+    <app-spinner></app-spinner>
+  </div>
+
+  <div *ngIf="!loading">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Sport</th>
+          <th>Category</th>
+          <th>Tournament</th>
+          <th>Nome</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let season of data">
+          <td>
+            <small>{{ season.tournament.category.sport.name }}</small>
+          </td>
+          <td>
+            <small>{{ season.tournament.category.name }}</small>
+          </td>
+          <td>
+            <small>{{ season.tournament.name }}</small>
+          </td>
+          <td>
+            <small>{{ season.name }}</small>
+          </td>
+          <td>
+            <i class="icon-chart"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

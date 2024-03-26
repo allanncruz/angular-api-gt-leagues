@@ -10,7 +10,7 @@
   }
 
   &-brand img {
-    width: 40px;
+    width: 100px;
   }
 
   &-items{
@@ -39,5 +39,10 @@
     &:hover{
       color: #0d9ff8;
     }
+  }
+
+
+  .active{
+    color: #0d9ff8;
   }
 }
