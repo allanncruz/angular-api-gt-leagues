@@ -18,7 +18,6 @@ export class PgResultsComponent implements OnInit {
       (response) => {
         this.data = response;
         this.loading = false;
-        console.log(this.data[0].kickoff)
       },
       (error) => {
         console.error('Erro ao carregar dados:', error);

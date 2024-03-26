@@ -20,7 +20,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let results of data">
+        <tr *ngFor="let results of data" [ngClass]="{'table-draw': results.result.stats.home_score === results.result.stats.away_score}">
           <td>
             {{ results.matchNr }}
           </td>
@@ -35,7 +35,8 @@
             <div>
               <img src="{{ results.participants[0].participant.team.crest }}" alt="">
               {{ results.participants[0].participant.team.name }}
-              <small>{{ results.participants[0].participant.player.name }}</small>
+              <span>{{ results.participants[0].participant.player.name }}</span>
+              <small>{{ results.participants[0].participant.player.nickname }}</small>
             </div>
           </td>
           <td>{{ results.result.stats.home_score}}</td>
@@ -45,7 +46,8 @@
             <div>
               <img src="{{ results.participants[1].participant.team.crest }}" alt="">
               {{ results.participants[1].participant.team.name }}
-              <small>{{ results.participants[1].participant.player.name }}</small>
+              <span>{{ results.participants[1].participant.player.name }}</span>
+              <small>{{ results.participants[1].participant.player.nickname }}</small>
             </div>
           </td>
           <td>

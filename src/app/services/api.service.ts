@@ -39,6 +39,7 @@ export class ApiService {
     return this.http.get(`${this.apiGtLeague}seasons?limit=${this.limit}&offset=0&status=1`);
   }
 
+
   fetchResultsData(): Observable<any> {
     const kickoff = `between:${this.currentDate}T03:00:00.000Z,${this.tomorrowDate}T02:59:59.999Z`;
     const params  = {
