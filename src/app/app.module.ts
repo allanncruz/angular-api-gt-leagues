@@ -15,8 +15,6 @@ import { PgResultsComponent } from './pages/pg-results/pg-results.component';
 import { PgHomeComponent } from './pages/pg-home/pg-home.component';
 import { PgSeasonsComponent } from './pages/pg-seasons/pg-seasons.component';
 import { RouterModule } from '@angular/router';
-import { NgxImageCompressService } from 'ngx-image-compress';
-import { PgPhotoComponent } from './pages/pg-photo/pg-photo.component';
 import { ApiService } from './services/api.service';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SpResultsComponent } from './pages/sp-results/sp-results.component';
@@ -29,7 +27,6 @@ import { SpResultsComponent } from './pages/sp-results/sp-results.component';
     PgResultsComponent,
     PgHomeComponent,
     PgSeasonsComponent,
-    PgPhotoComponent,
     SpinnerComponent,
     SpResultsComponent
   ],
@@ -42,7 +39,6 @@ import { SpResultsComponent } from './pages/sp-results/sp-results.component';
       {path: 'results', component: PgResultsComponent },
       {path: 'results/:id', component: SpResultsComponent },
       {path: 'current-seasons', component: PgSeasonsComponent },
-      {path: 'imagem-compress', component: PgPhotoComponent }
     ]),
     FormsModule,
     AngularFireModule.initializeApp({
@@ -60,8 +56,7 @@ import { SpResultsComponent } from './pages/sp-results/sp-results.component';
   ],
   providers: [
     AuthService, 
-    ApiService,
-    NgxImageCompressService
+    ApiService
   ],
   bootstrap: [AppComponent]
 })
