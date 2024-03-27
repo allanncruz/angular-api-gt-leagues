@@ -7,6 +7,11 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./cp-navbar.component.scss']
 })
 export class NavbarComponent {
-  constructor(public auth: AuthService) {
+  isMenuOpen: boolean = false;
+
+  constructor(public auth: AuthService) {}
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }
