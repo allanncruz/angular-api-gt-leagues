@@ -24,6 +24,30 @@
     float: right;
     margin-bottom: 5px;
   }
+
+  @media screen and (max-width: 768px){
+    font-size: 11px;
+    
+    tr{
+      th:nth-child(1),
+      th:nth-child(2),
+      th:nth-child(3),
+      td:nth-child(1),
+      td:nth-child(2),
+      td:nth-child(3)
+      {
+        display: none;
+      }
+    }
+
+    &-away{
+      width: auto;
+    }
+  
+    &-home{
+      width: auto;
+    }
+  }
 }
 
 .icon-chart{

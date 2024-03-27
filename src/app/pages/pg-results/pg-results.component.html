@@ -13,8 +13,6 @@
           <th>kickoff</th>
           <th>Home</th>
           <th></th>
-          <th></th>
-          <th></th>
           <th>Away</th>
           <th>Status</th>
         </tr>
@@ -39,9 +37,11 @@
               <small>{{ results.participants[0].participant.player.nickname }}</small>
             </div>
           </td>
-          <td>{{ results.result.stats.home_score}}</td>
-          <td>X</td>
-          <td>{{ results.result.stats.away_score}}</td>
+          <td class="table-score">
+            {{ results.result.stats.home_score}}
+             X 
+            {{ results.result.stats.away_score}}
+          </td>
           <td class="table-away"> 
             <div>
               <img src="{{ results.participants[1].participant.team.crest }}" alt="">
