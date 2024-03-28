@@ -9,7 +9,7 @@ export class ApiService {
   currentDate   = '' as string;
   tomorrowDate  = '' as string;
   limit: number = 1000;
-  apiGtLeague: string = "https://api.gtleagues.com/api/";
+  baseURL: string = "https://api.gtleagues.com/api/";
 
   constructor(private http: HttpClient) {
     this.setCurrentDate();
@@ -36,7 +36,7 @@ export class ApiService {
   }
 
   fetchSeasonsData(): Observable<any> {
-    return this.http.get(`${this.apiGtLeague}seasons?limit=${this.limit}&offset=0&status=1`);
+    return this.http.get(`${this.baseURL}seasons?limit=${this.limit}&offset=0&status=1`);
   }
 
 
@@ -51,6 +51,11 @@ export class ApiService {
       xtc: true
     };
 
-    return this.http.get(`${this.apiGtLeague}fixtures`, { params });
+    return this.http.get(`${this.baseURL}fixtures`, { params });
+  }
+
+
+  fetchDetailsData(id: number): Observable<any> {
+    return this.http.get(`${this.baseURL}fixtures/${id}`);
   }
 }
