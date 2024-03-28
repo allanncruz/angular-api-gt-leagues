@@ -8,13 +8,13 @@
     <div class="nav-items" [ngClass]="{'active': isMenuOpen}">
       <ul class="menu">
         <li class="menu-item">
-          <a class="menu-link" routerLink='/home' routerLinkActive='active'>Início</a>
+          <a class="menu-link" routerLink='/home' routerLinkActive='active' (click)="handleCloseMenu()">Início</a>
         </li> 
         <li class="menu-item">
-          <a class="menu-link" routerLink='results' routerLinkActive='active'>Results</a>
+          <a class="menu-link" routerLink='results' routerLinkActive='active' (click)="handleCloseMenu()">Results</a>
         </li>
         <li class="menu-item">
-          <a class="menu-link" routerLink='current-seasons' routerLinkActive='active'>Seasons</a>
+          <a class="menu-link" routerLink='current-seasons' routerLinkActive='active' (click)="handleCloseMenu()">Seasons</a>
         </li>
       </ul>
       <div>
