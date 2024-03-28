@@ -17,7 +17,7 @@ import { PgSeasonsComponent } from './pages/pg-seasons/pg-seasons.component';
 import { RouterModule } from '@angular/router';
 import { ApiService } from './services/api.service';
 import { SpinnerComponent } from './components/spinner/spinner.component';
-import { SpResultsComponent } from './pages/sp-results/sp-results.component';
+import { DetailsResultsComponent } from './pages/pg-results/details/detail-results.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,7 @@ import { SpResultsComponent } from './pages/sp-results/sp-results.component';
     PgHomeComponent,
     PgSeasonsComponent,
     SpinnerComponent,
-    SpResultsComponent
+    DetailsResultsComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +37,7 @@ import { SpResultsComponent } from './pages/sp-results/sp-results.component';
       {path: '', component: PgHomeComponent },
       {path: 'home', component: PgHomeComponent },
       {path: 'results', component: PgResultsComponent },
-      {path: 'results/:id', component: SpResultsComponent },
+      {path: 'results/:id', component: DetailsResultsComponent },
       {path: 'current-seasons', component: PgSeasonsComponent },
     ]),
     FormsModule,
