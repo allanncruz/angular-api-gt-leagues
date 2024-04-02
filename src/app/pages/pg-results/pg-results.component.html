@@ -18,7 +18,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let results of data" [ngClass]="{'table-draw': results.result.stats.home_score === results.result.stats.away_score}">
+        <tr *ngFor="let results of data" routerLink="{{results.id}}">
           <td>
             {{ results.matchNr }}
           </td>
@@ -36,7 +36,7 @@
               <span>{{ results.participants[0].participant.player.name }}</span>
               <small>{{ results.participants[0].participant.player.nickname }}</small>
             </div>
-          </td>
+          </td> 
           <td class="table-score">
             {{ results.result.stats.home_score}}
              X 
