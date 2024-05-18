@@ -44,7 +44,7 @@ export class ApiService {
     const kickoff = `between:${this.currentDate}T03:00:00.000Z,${this.tomorrowDate}T02:59:59.999Z`;
     const params  = {
       kickoff,
-      limit: 200,
+      limit: 1000,
       offset: 0,
       sort: '-kickoff,-matchNr',
       status: 'in:3,5,4,6',
