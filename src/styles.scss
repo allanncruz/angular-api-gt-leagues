@@ -136,6 +136,18 @@ $color-light: #eef0f8;
   .icon-chart{
     color: #0d9ff8;
   }
+
+  @media screen and (max-width: 768px){
+    font-size: 11px;
+    
+    tr{
+      th:nth-child(1),
+      td:nth-child(1)
+      {
+        display: none;
+      }
+    }
+  }
 }
 
 .icon{

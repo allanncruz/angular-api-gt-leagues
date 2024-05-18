@@ -5,7 +5,7 @@ export interface ResultsResponse extends Array<ResultsResponse> {
       stats: {
       away_score: number,
       home_score: number
-      }
+    }
   },
   participants: Participants,
   season: Pournament,
@@ -16,12 +16,15 @@ export interface ResultsResponse extends Array<ResultsResponse> {
   
 interface Pournament extends Array<Pournament> {
   tournament: {
+    name: string,
     category: {
+      name: string
       sport: {
         name: string
       }
     }
   }
+  name: string
 };
   
 interface Participants extends Array<Participants> {

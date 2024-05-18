@@ -13,6 +13,21 @@
     }
   }
 
+  &-draw{
+    background-color: #fdd7d7 !important;
+  }
+
+  td{
+    &.impar{
+      background-color: #a1ceff;
+    }
+
+    &.par{
+      background-color: #d1ffa8;
+    }
+  }
+
+
   img{
     width: 20px;
     height: 20px;
@@ -22,7 +37,6 @@
   }
 
   @media screen and (max-width: 768px){
-    font-size: 11px;
     
     tr{
       th:nth-child(1),

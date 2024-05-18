@@ -18,7 +18,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let results of data" routerLink="{{results.id}}">
+        <tr *ngFor="let results of data" routerLink="{{results.id}}" [ngClass]="{'table-draw': results.result.stats.home_score === results.result.stats.away_score}">
           <td>
             {{ results.matchNr }}
           </td>
@@ -29,7 +29,7 @@
           <td>
             <small>{{ results.kickoff  | date:'M/d/yy, h:mm a' }}</small>
           </td>
-          <td class="table-home">
+          <td class="table-home" [ngClass]="{'par': results.result.stats.home_score % 2 === 0, 'impar': results.result.stats.home_score % 2 !== 0}">
             <div>
               <img src="{{ results.participants[0].participant.team.crest }}" alt="">
               {{ results.participants[0].participant.team.name }}
@@ -42,7 +42,7 @@
              X 
             {{ results.result.stats.away_score}}
           </td>
-          <td class="table-away"> 
+          <td class="table-away" [ngClass]="{'par': results.result.stats.away_score % 2 === 0, 'impar': results.result.stats.away_score % 2 !== 0}"> 
             <div>
               <img src="{{ results.participants[1].participant.team.crest }}" alt="">
               {{ results.participants[1].participant.team.name }}

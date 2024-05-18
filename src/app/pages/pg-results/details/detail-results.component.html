@@ -1,1 +1,17 @@
-<p>sp-results works!</p>
+<div class="container">
+  <div *ngIf="loading">
+    <app-spinner></app-spinner>
+  </div>
+  <div *ngIf="!loading">
+    <h1>
+      {{ data.season.tournament.category.name}} / 
+      {{ data.season.tournament.name}} / 
+      {{ data.season.name}}
+    </h1>
+
+    <section class="score">
+      <div class="score__result">{{ data.result.stats.home_score }}</div>
+      <div class="score__result">{{ data.result.stats.away_score }}</div>
+    </section>
+  </div>
+</div>
