@@ -54,6 +54,7 @@
             <a class="menu-link" routerLink="{{results.id}}">
               <i class="icon-chart"></i>
             </a>
+            <span class="canceled" *ngIf="!results.result.stats.home_score">Cancelado</span>
           </td>
         </tr>
       </tbody>

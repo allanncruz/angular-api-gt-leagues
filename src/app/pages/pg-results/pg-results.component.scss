@@ -18,6 +18,7 @@
   }
 
   td{
+    position: relative;
     &.impar{
       background-color: #a1ceff;
     }
@@ -25,6 +26,18 @@
     &.par{
       background-color: #d1ffa8;
     }
+  }
+
+  .canceled {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: red;
+    color: #fff;
+    width: 60px;
+    text-transform: uppercase;
+    font-size: 9px;
+    padding: 2px;
   }
 
 
