@@ -13,19 +13,12 @@
     }
   }
 
-  &-draw{
-    background-color: #fdd7d7 !important;
+  .home-victory{
+    background-color: #dbfdd7 !important;
   }
 
   td{
     position: relative;
-    &.impar{
-      background-color: #a1ceff;
-    }
-
-    &.par{
-      background-color: #d1ffa8;
-    }
   }
 
   .canceled {
