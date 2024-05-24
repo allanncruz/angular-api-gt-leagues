@@ -10,6 +10,8 @@ import { ApiService } from 'src/app/services/api.service';
 export class PgResultsComponent implements OnInit {
   data = {} as ResultsResponse;
   loading: boolean = true;
+  selectedOverNumber: number = 1.5;
+  numbers: number[] = [1.5, 2.5, 3.5, 4.5, 5.5, 6.5, 7.5, 8.5, 9.5, 10.5, ];
 
   constructor(public resultsData: ApiService) {}
   

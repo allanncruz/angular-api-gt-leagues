@@ -4,6 +4,12 @@
   </div>
 
   <div *ngIf="!loading">
+    <div class="filter">
+      <label for="number-select">Indicar por total gol+:</label>
+      <select id="number-select" [(ngModel)]="selectedOverNumber">
+        <option *ngFor="let number of numbers" [value]="number">{{ number }}</option>
+      </select>
+    </div>
     <table class="table">
       <thead>
         <tr>
@@ -18,7 +24,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let results of data" routerLink="{{results.id}}" [ngClass]="{'home-victory': results.result.stats.home_score >= results.result.stats.away_score}">
+        <tr *ngFor="let results of data" routerLink="{{results.id}}" [ngClass]="{'home-victory': results.result.stats.home_score + results.result.stats.away_score > selectedOverNumber}">
           <td >
             {{ results.matchNr }}
           </td>

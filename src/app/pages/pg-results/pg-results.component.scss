@@ -66,3 +66,16 @@
 .icon-chart{
   margin: 0 auto;
 }
+
+.filter{
+  margin: 30px 0 0 0;
+
+  select{
+    padding: 3px;
+    border: solid 1px #ccc;
+    background: #fff;
+    margin-left: 5px;
+    outline: none;
+    cursor: pointer;
+  }
+}
